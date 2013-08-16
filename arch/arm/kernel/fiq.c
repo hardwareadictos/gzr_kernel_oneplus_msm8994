@@ -92,9 +92,8 @@ void set_fiq_handler(void *start, unsigned int length)
 	if (!cache_is_vipt_nonaliasing())
 		flush_icache_range((unsigned long)base + offset, offset +
 				   length);
-
 		flush_icache_range(base + offset, offset + length);
-	flush_icache_range(0xffff0000 + offset, 0xffff0000 + offset + length);
+		flush_icache_range(0xffff0000 + offset, 0xffff0000 + offset + length);
 }
 
 int claim_fiq(struct fiq_handler *f)
