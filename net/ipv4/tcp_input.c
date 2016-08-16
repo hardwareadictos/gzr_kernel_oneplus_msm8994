@@ -3302,7 +3302,7 @@ static void tcp_send_challenge_ack(struct sock *sk)
 	}
 	count = ACCESS_ONCE(challenge_count);
 	if (count > 0) {
-		ACCESS_ONCE(challenge_count) =  count - 1;
+		ACCESS_ONCE(challenge_count) = count - 1;
 		NET_INC_STATS_BH(sock_net(sk), LINUX_MIB_TCPCHALLENGEACK);
 		tcp_send_ack(sk);
 	}
