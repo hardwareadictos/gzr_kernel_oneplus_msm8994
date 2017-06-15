@@ -2358,7 +2358,8 @@ int hdd_ipa_uc_ssr_deinit()
 
 	if (!hdd_ipa_uc_is_enabled(hdd_ipa))
 		return 0;
-
+	hdd_ctx = hdd_ipa->hdd_ctx;
+	
 	/* send disconnect to ipa driver */
 	hdd_ipa_uc_disconnect(hdd_ctx);
 
