@@ -565,3 +565,4 @@ CONFIG_QMI_ENCDEC=y
 
 #HardwareAdictos extra modules
 CONFIG_ADRENO_IDLER=y
+CONFIG_DYNAMIC_FSYNC=y
